@@ -1,4 +1,4 @@
-= Awstruct I-Beams
+= Awestruct I-Beams
 
 The `awestruct-ibeams` gem adds more structural support with a variety of
 different extensions to the link:http://awestruct.org[Awestruct] static site
