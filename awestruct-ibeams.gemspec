@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["R. Tyler Croy"]
   spec.email         = ["tyler@monkeypox.org"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
+  spec.summary       = "Collection of helpful Awestruct extensions and helpers"
+  spec.description   = "Collection of helpful Awestruct extensions and helpers"
   spec.homepage      = 'https://github.com/jenkins-infra/awestruct-ibeams'
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
