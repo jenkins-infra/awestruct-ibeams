@@ -21,7 +21,7 @@ module Awestruct
       end
 
       def execute(site)
-        Dir.glob(File.join(site.dir, @datadir, '*')).each do |entry|
+        Dir.glob(File.join(site.dir, @data_dir, '*')).each do |entry|
           next unless File.directory? entry
           data_key = File.basename(entry)
           data_map = {}
