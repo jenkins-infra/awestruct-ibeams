@@ -37,7 +37,11 @@ module Awestruct
           document.sections.each do |section|
             sections << [
               section.title,
-              adoc,
+              {
+                :asciidoc => document,
+                :path => adoc,
+                :page => page,
+              },
               url,
               find_subsections_from(section, document)
             ]
@@ -64,7 +68,10 @@ module Awestruct
           title = subsection.title
           found << [
             title,
-            in_document.file,
+            {
+              :asciidoc => in_document,
+              :path => in_document.file,
+            },
             section_anchor(title, in_document),
             find_subsections_from(subsection, in_document),
           ]
