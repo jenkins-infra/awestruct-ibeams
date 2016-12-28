@@ -1,4 +1,5 @@
 require 'asciidoctor'
+require 'naturally'
 require 'awestruct/ibeams/errors'
 
 module Awestruct
@@ -25,7 +26,7 @@ module Awestruct
         pages_by_path = site.pages.map { |p| [p.source_path, p] }.to_h
         sections = []
 
-        Dir.glob(File.join(directory, "*.{ad,adoc}")).sort.each do |adoc|
+        Naturally.sort(Dir.glob(File.join(directory, '*.{ad,adoc}'))).reverse_each do |adoc|
           # Since all our documents are going to have front-matter so they render
           # properly, we need to look first at the Awestruct::Page and then
           # re-render to grab the sections from the asciidoc
