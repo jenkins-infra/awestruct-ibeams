@@ -45,6 +45,12 @@ describe Awestruct::IBeams::AsciidocSections do
           pipeline.section_anchor('RSpec!', doc)
         ).to eql('rspec')
       end
+
+      it 'should delete leading separator' do
+        expect(
+          pipeline.section_anchor('<code>deleteDir</code>: Recursively delete the current directory from the workspace', doc)
+        ).to eql('deletedir-recursively-delete-the-current-directory-from-the-workspace')
+      end
     end
 
 

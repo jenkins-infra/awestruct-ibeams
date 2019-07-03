@@ -99,7 +99,7 @@ module Awestruct
 
         return [
           prefix,
-          title.tr_s(" ._-", separator).chomp(separator),
+          title.tr_s(" ._-", separator).chomp(separator).delete_prefix(separator),
         ].join('')
       end
     end
