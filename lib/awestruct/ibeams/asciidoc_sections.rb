@@ -95,7 +95,7 @@ module Awestruct
       def section_anchor(title, in_document)
         prefix = in_document.attributes['idprefix'] || ''
         separator = in_document.attributes['idseparator'] || '-'
-        title = title.downcase.gsub(Asciidoctor::InvalidSectionIdCharsRx, separator)
+        title = title.downcase.gsub(Asciidoctor::InvalidSectionIdCharsRx, '')
 
         return [
           prefix,

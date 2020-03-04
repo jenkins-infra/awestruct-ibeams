@@ -51,6 +51,12 @@ describe Awestruct::IBeams::AsciidocSections do
           pipeline.section_anchor('<code>deleteDir</code>: Recursively delete the current directory from the workspace', doc)
         ).to eql('deletedir-recursively-delete-the-current-directory-from-the-workspace')
       end
+
+      it 'should skip forbidden characters' do
+        expect(
+          pipeline.section_anchor('<code>step([$class: \'BuildScanner\'])</code>: Acunetix', doc)
+        ).to eql('stepclass-buildscanner-acunetix')
+      end
     end
 
 
