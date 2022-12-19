@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gemspec
 
 group :development do
-  gem 'rake', '~> 10.0'
+  gem 'rake', '~> 13.0.6'
   gem 'pry'
   gem 'rspec'
   gem 'rspec-its'
