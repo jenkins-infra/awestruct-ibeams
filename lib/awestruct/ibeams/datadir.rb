@@ -30,7 +30,7 @@ module Awestruct
             key = $1.to_sym
             chunk_page = nil
             if chunk.end_with?('.yml')
-              chunk_page = YAML.load_file(chunk)
+              chunk_page = YAML.load_file(chunk, :permitted_classes => ['Date', 'Symbol'])
             else
               chunk_page = site.engine.load_page(chunk)
             end
